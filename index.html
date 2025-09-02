@@ -1,6 +1,36 @@
-<html>
-<script>
-window.location.replace("https://www.youtube.com/watch?v=16n-VbPmdco");
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Screen Video</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
 
+    video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* fills screen without distortion */
+      z-index: -1; /* put behind other content */
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop>
+    <source src="Bayer_v15.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Optional content on top of video -->
+  <h1 style="color: white; text-align: center; margin-top: 20%;">Welcome!</h1>
+</body>
 </html>
